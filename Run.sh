@@ -7,7 +7,7 @@ zippassword='zpasswd'
 mysqlusername'mysqlusr'
 mysqluserpassword='mysqlpw'
 databasename='mysqldbn'
-export dboutputname=$databasename'_'$(date "+%Y%m%d%H%M%S")'.sql'
+dboutputname=$databasename'_'$(date "+%Y%m%d%H%M%S")'.sql'
 finaloutput=$dboutputname'.zip'
 
 /usr/bin/mysqldump -u$mysqlusername -p$mysqluserpassword $databasename > '/root/'$dboutputname
