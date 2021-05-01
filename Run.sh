@@ -8,7 +8,7 @@ zippassword='zpasswd'
 mysqlusername='dbu'
 mysqluesrpassword='dbp'
 databasename='dbn'
-backupoutputname=$databasename'.sql'                                                                                                                                                                               
+backupoutputname=$databasename'_'$(date "+%Y%m%d%H%M%S")'.sql'                                                                                                                                                                               
 
 /usr/bin/mysqldump -u$mysqlusername -p$mysqluserpassword $databasename > $backupoutputname
 sleep 5
